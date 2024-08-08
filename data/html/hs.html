@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Wallpaper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(data:image/jpeg;base64,{{base64_string}}) no-repeat center center;
+            background-size: contain; /* Fit the image within the viewport while maintaining aspect ratio */
+            background-color: #333; /* Fallback color in case the image doesn't load */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #f0f0f0;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Black overlay with transparency */
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            background: rgba(44, 44, 44, 0.8); /* Semi-transparent background */
+            border-radius: 15px;
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            z-index: 2; /* Ensure container is above the overlay */
+        }
+        h1 {
+            color: #ecf0f1;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Cursive', sans-serif;
+            text-shadow: 2px 2px 5px #000;
+            transform: scaleX(1.05) scaleY(1.05);
+        }
+        p {
+            color: #bdc3c7;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .countdown {
+            font-size: 2rem;
+            color: #e74c3c;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #000;
+            margin-bottom: 10px; /* Space between Days Left and Days Passed */
+        }
+        .days-passed {
+            font-size: 1.2rem; /* Slightly smaller than Days Left */
+            color: #95a5a6; /* Light Gray */
+            font-weight: normal;
+            text-shadow: 1px 1px 3px #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Discipline</h1>
+        <p>{{quote}}</p>
+        <div class="countdown" id="countdown">
+            Days Left: <span id="days-left">{{days_to}}</span>
+        </div>
+        <div class="days-passed" id="days-passed">
+            Days Passed: <span id="days-passed-value">{{days_passed}}</span>
+        </div>
+    </div>
+</body>
+</html>
