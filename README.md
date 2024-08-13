@@ -26,9 +26,6 @@
    - Add your preferred background images to the `data/images` folder in your project directory.
    - Ensure that all images are in `.jpg` format (e.g., `background1.jpg`, `background2.jpg`).
 
-2. **Update Image Paths**:
-   - Modify the configuration file to include the paths to your images. Update the `image_path` setting to point to the new images.
-
 ## Features
 
 - **Custom Wallpaper**: Change your Windows desktop wallpaper programmatically to any `.jpg` image you choose.
